@@ -6,9 +6,7 @@
         "cameraId": "camera_1",
         "cameraIpAddress": "192.136.0.25",
         "cameraRtspLink": "0https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8",
-        "enabledServices": [
-          "UNSPECIFIED"
-        ],
+        "enabledServices": ["UNSPECIFIED"],
         "labels": {
           "additionalProp1": "string",
           "additionalProp2": "string",
@@ -117,12 +115,10 @@
     },
     {
       "camera": {
-        "cameraId": "camera 2 ",
+        "cameraId": "camera_2",
         "cameraIpAddress": "string",
         "cameraRtspLink": "0https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8",
-        "enabledServices": [
-          "UNSPECIFIED"
-        ],
+        "enabledServices": ["UNSPECIFIED"],
         "labels": {
           "additionalProp1": "string",
           "additionalProp2": "string",
@@ -133,12 +129,10 @@
     },
     {
       "camera": {
-        "cameraId": "camera 3 ",
+        "cameraId": "camera_4",
         "cameraIpAddress": "string",
         "cameraRtspLink": "0https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8",
-        "enabledServices": [
-          "UNSPECIFIED"
-        ],
+        "enabledServices": ["UNSPECIFIED"],
         "labels": {
           "additionalProp1": "string",
           "additionalProp2": "string",
@@ -149,12 +143,10 @@
     },
     {
       "camera": {
-        "cameraId": "camera 4 ",
+        "cameraId": "camera_3",
         "cameraIpAddress": "string",
         "cameraRtspLink": "0https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8",
-        "enabledServices": [
-          "UNSPECIFIED"
-        ],
+        "enabledServices": ["UNSPECIFIED"],
         "labels": {
           "additionalProp1": "string",
           "additionalProp2": "string",

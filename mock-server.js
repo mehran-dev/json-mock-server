@@ -2,9 +2,11 @@ const express = require("express");
 const fs = require("fs");
 const path = require("path");
 const app = express();
+const cors = require("cors");
 const port = 8008;
 
 app.use(express.json());
+app.use(cors("*"));
 
 // Path to the JSON file
 const dataFilePath = path.join(__dirname, "db.json");
@@ -23,8 +25,6 @@ const writeDataToFile = (data) => {
   fs.writeFileSync(dataFilePath, JSON.stringify(data, null, 2));
 };
 
-// Initialize data
-
 // Get the data
 app.get("/api/", (req, res) => {
   let mockData = readDataFromFile();
@@ -37,7 +37,7 @@ app.get("/api/cameras", (req, res) => {
     return cam;
   });
 
-  res.json(result);
+  res.json({ cameras: result });
 });
 
 // Get Line crosses policy
@@ -45,53 +45,35 @@ app.get("/api/cameras/:id", (req, res) => {
   let mockData = readDataFromFile();
   const id = req.params.id;
   //linecrossPolicy
-  console.log(id);
-
   const index = mockData.cameras.findIndex(
     (item) => item.camera.cameraId === id
   );
-
   const result = mockData.cameras[index];
-
   res.status(200).json({ linecrossPolicy: result.linecrossPolicy });
 });
 
 // Update policy
 app.post("/api/cameras", (req, res) => {
   let mockData = readDataFromFile();
-  console.log("mockData", mockData);
   const id = req.body.cameraId;
-  console.log("id", id);
-
   const newPolicy = req.body.linecrossPolicy;
-
-  console.log("newPolicy", newPolicy);
-
-  console.log("---------------------------------------------------------");
-  console.log("mockData.cameras", mockData.cameras);
-  console.log("---------------------------------------------------------");
   const index = mockData.cameras.findIndex(
     (item) => item.camera.cameraId === id
   );
-
-  console.log("index", index);
-
   let currentCamera = mockData.cameras[index];
-
   currentCamera.linecrossPolicy = newPolicy;
-
   writeDataToFile(mockData);
   res.json(updatedItem);
 });
 
 // Delete an item
-app.delete("/api/item/:id", (req, res) => {
-  let mockData = readDataFromFile();
-  const id = req.params.id;
-  mockData.items = mockData.items.filter((item) => item.id !== id);
-  writeDataToFile(mockData);
-  res.status(204).send();
-});
+// app.delete("/api/item/:id", (req, res) => {
+//   let mockData = readDataFromFile();
+//   const id = req.params.id;
+//   mockData.items = mockData.items.filter((item) => item.id !== id);
+//   writeDataToFile(mockData);
+//   res.status(204).send();
+// });
 
 app.listen(port, () => {
   console.log(`Mock server running at http://localhost:${port}`);
