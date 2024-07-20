@@ -6,85 +6,18 @@
         "cameraId": "camera_1",
         "cameraIpAddress": "192.136.0.25",
         "cameraRtspLink": "0https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8",
-        "enabledServices": ["UNSPECIFIED"],
+        "enabledServices": [
+          "UNSPECIFIED"
+        ],
         "labels": {
           "additionalProp1": "string",
           "additionalProp2": "string",
           "additionalProp3": "string"
         }
       },
-      "cameraShot": "https://media-cdn.tripadvisor.com/media/photo-s/05/22/5b/0b/caption.jpg",
+      "cameraShot": "http://localhost:8008/1.jpg",
       "linecrossPolicy": {
         "lines": [
-          {
-            "lineId": "up_string-222",
-            "line": {
-              "p1": {
-                "x": 0,
-                "y": 0
-              },
-              "p2": {
-                "x": 0.5,
-                "y": 0.5
-              }
-            },
-            "isEnabled": true,
-            "labels": {
-              "additionalProp1": "string",
-              "additionalProp2": "string",
-              "additionalProp3": "string"
-            }
-          },
-          {
-            "lineId": "up_string-202020",
-            "line": {
-              "p1": {
-                "x": 0.2,
-                "y": 0.6
-              },
-              "p2": {
-                "x": 0.7,
-                "y": 0.6
-              }
-            },
-            "isEnabled": true,
-            "labels": {
-              "additionalProp1": "string",
-              "additionalProp2": "string",
-              "additionalProp3": "string"
-            }
-          }
-        ],
-        "areas": [
-          {
-            "areaId": "up_string-333",
-            "area": {
-              "points": [
-                {
-                  "x": 0.1,
-                  "y": 0.1
-                },
-                {
-                  "x": 0.6,
-                  "y": 0.1
-                },
-                {
-                  "x": 0.8,
-                  "y": 0.9
-                },
-                {
-                  "x": 0.3,
-                  "y": 0.9
-                }
-              ]
-            },
-            "isEnabled": true,
-            "labels": {
-              "additionalProp1": "string",
-              "additionalProp2": "string",
-              "additionalProp3": "string"
-            }
-          },
           {
             "areaId": "up_string-444",
             "area": {
@@ -110,6 +43,55 @@
               "additionalProp3": "string"
             }
           }
+        ],
+        "areas": [
+          {
+            "areaId": "up_string-444",
+            "area": {
+              "points": [
+                {
+                  "x": 0.3,
+                  "y": 0.3
+                },
+                {
+                  "x": 0.9,
+                  "y": 0.2
+                },
+                {
+                  "x": 0.2,
+                  "y": 0.2
+                }
+              ]
+            },
+            "isEnabled": false,
+            "labels": {
+              "additionalProp1": "string",
+              "additionalProp2": "string",
+              "additionalProp3": "string"
+            }
+          },
+          {
+            "area": {
+              "points": [
+                {
+                  "x": 0.11794354838709678,
+                  "y": 0.532258064516129
+                },
+                {
+                  "x": 0.47076612903225806,
+                  "y": 0.5080645161290323
+                },
+                {
+                  "x": 0.7026209677419355,
+                  "y": 0.5725806451612904
+                },
+                {
+                  "x": 0.48689516129032256,
+                  "y": 0.05241935483870968
+                }
+              ]
+            }
+          }
         ]
       }
     },
@@ -118,42 +100,75 @@
         "cameraId": "camera_2",
         "cameraIpAddress": "string",
         "cameraRtspLink": "0https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8",
-        "enabledServices": ["UNSPECIFIED"],
+        "enabledServices": [
+          "UNSPECIFIED"
+        ],
         "labels": {
           "additionalProp1": "string",
           "additionalProp2": "string",
           "additionalProp3": "string"
         }
       },
-      "cameraShot": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0e/4d/34/d3/photo3jpg.jpg?w=1200&h=-1&s=1"
+      "cameraShot": "http://localhost:8008/2.jpg"
     },
     {
       "camera": {
         "cameraId": "camera_4",
         "cameraIpAddress": "string",
         "cameraRtspLink": "0https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8",
-        "enabledServices": ["UNSPECIFIED"],
+        "enabledServices": [
+          "UNSPECIFIED"
+        ],
         "labels": {
           "additionalProp1": "string",
           "additionalProp2": "string",
           "additionalProp3": "string"
         }
       },
-      "cameraShot": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1d/15/37/5c/caption.jpg?w=1100&h=-1&s=1"
+      "cameraShot": "http://localhost:8008/3.jpg",
+      "linecrossPolicy": {
+        "lines": [],
+        "areas": [
+          {
+            "area": {
+              "points": [
+                {
+                  "x": 0.27318548387096775,
+                  "y": 0.29838709677419356
+                },
+                {
+                  "x": 0.2852822580645161,
+                  "y": 0.5604838709677419
+                },
+                {
+                  "x": 0.6542338709677419,
+                  "y": 0.5806451612903226
+                },
+                {
+                  "x": 0.6905241935483871,
+                  "y": 0.1935483870967742
+                }
+              ]
+            }
+          }
+        ]
+      }
     },
     {
       "camera": {
         "cameraId": "camera_3",
         "cameraIpAddress": "string",
         "cameraRtspLink": "0https://demo.unified-streaming.com/k8s/features/stable/video/tears-of-steel/tears-of-steel.ism/.m3u8",
-        "enabledServices": ["UNSPECIFIED"],
+        "enabledServices": [
+          "UNSPECIFIED"
+        ],
         "labels": {
           "additionalProp1": "string",
           "additionalProp2": "string",
           "additionalProp3": "string"
         }
       },
-      "cameraShot": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1c/8f/a0/b2/dsc-1374-largejpg.jpg?w=1200&h=-1&s=1"
+      "cameraShot": "http://localhost:8008/4.jpg"
     }
   ]
 }

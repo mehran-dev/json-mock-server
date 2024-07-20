@@ -25,6 +25,8 @@ const writeDataToFile = (data) => {
   fs.writeFileSync(dataFilePath, JSON.stringify(data, null, 2));
 };
 
+app.use(express.static(path.join(__dirname, "public")));
+
 // Get the data
 app.get("/api/", (req, res) => {
   let mockData = readDataFromFile();
@@ -57,13 +59,15 @@ app.post("/api/cameras", (req, res) => {
   let mockData = readDataFromFile();
   const id = req.body.cameraId;
   const newPolicy = req.body.linecrossPolicy;
+
+  console.log("new policy", newPolicy);
   const index = mockData.cameras.findIndex(
     (item) => item.camera.cameraId === id
   );
   let currentCamera = mockData.cameras[index];
   currentCamera.linecrossPolicy = newPolicy;
   writeDataToFile(mockData);
-  res.json(updatedItem);
+  res.json({ ok: true });
 });
 
 // Delete an item
