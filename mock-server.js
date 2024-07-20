@@ -25,13 +25,14 @@ const writeDataToFile = (data) => {
 };
 
 // Initialize data
-let mockData = readDataFromFile();
 
 // Get the data
 app.get("/api/", (req, res) => {
+  let mockData = readDataFromFile();
   res.json(mockData);
 });
 app.get("/api/cameras", (req, res) => {
+  let mockData = readDataFromFile();
   const result = mockData?.cameras?.map?.((cam) => {
     delete cam.linecrossPolicy;
     return cam;
@@ -42,6 +43,7 @@ app.get("/api/cameras", (req, res) => {
 
 // Get Line crosses policy
 app.get("/api/cameras/:id", (req, res) => {
+  let mockData = readDataFromFile();
   const id = req.params.id;
   //linecrossPolicy
   console.log(id);
@@ -57,13 +59,19 @@ app.get("/api/cameras/:id", (req, res) => {
 
 // Update policy
 app.post("/api/cameras", (req, res) => {
+  let mockData = readDataFromFile();
   const id = req.body.cameraId;
+  console.log("id", id);
 
   const newPolicy = req.body.linecrossPolicy;
+
+  console.log("newPolicy", newPolicy);
 
   const index = mockData.cameras.findIndex(
     (item) => item.cameras.cameraId === id
   );
+
+  console.log("index", index);
 
   let currentCamera = mockData.cameras[index];
 
@@ -75,6 +83,7 @@ app.post("/api/cameras", (req, res) => {
 
 // Delete an item
 app.delete("/api/item/:id", (req, res) => {
+  let mockData = readDataFromFile();
   const id = req.params.id;
   mockData.items = mockData.items.filter((item) => item.id !== id);
   writeDataToFile(mockData);
