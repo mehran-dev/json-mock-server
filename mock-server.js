@@ -1,6 +1,5 @@
 const express = require("express");
 const fs = require("fs");
-const { mock } = require("node:test");
 const path = require("path");
 const app = express();
 const port = 8008;
@@ -60,6 +59,7 @@ app.get("/api/cameras/:id", (req, res) => {
 // Update policy
 app.post("/api/cameras", (req, res) => {
   let mockData = readDataFromFile();
+  console.log("mockData", mockData);
   const id = req.body.cameraId;
   console.log("id", id);
 
@@ -67,8 +67,11 @@ app.post("/api/cameras", (req, res) => {
 
   console.log("newPolicy", newPolicy);
 
+  console.log("---------------------------------------------------------");
+  console.log("mockData.cameras", mockData.cameras);
+  console.log("---------------------------------------------------------");
   const index = mockData.cameras.findIndex(
-    (item) => item.cameras.cameraId === id
+    (item) => item.camera.cameraId === id
   );
 
   console.log("index", index);
