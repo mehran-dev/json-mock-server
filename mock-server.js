@@ -50,6 +50,7 @@ app.get("/api/cameras/:id", (req, res) => {
   const index = mockData.cameras.findIndex(
     (item) => item.camera.cameraId === id
   );
+  console.log("get line cross index ---> is ", index);
   const result = mockData.cameras[index];
   res.status(200).json({ linecrossPolicy: result.linecrossPolicy });
 });
